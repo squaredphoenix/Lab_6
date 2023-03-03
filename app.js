@@ -14,9 +14,17 @@ app.use(express.static(__dirname + '/public'));
 
 
 app.get('/', function(req, res) {
-
 	res.render('home'); 
 });
+
+app.get('/login', function(req, res){
+	res.render('login')
+});
+
+app.post({
+
+});
+
 // 404 catch-all handler (middleware)
 app.use(function(req, res, next){
 	res.status(404);
